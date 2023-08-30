@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/buildSrc" />
+            <option value="$PROJECT_DIR$/kotlin-spring-boot" />
+            <option value="$PROJECT_DIR$/kotlin-spring-boot-actuator" />
+            <option value="$PROJECT_DIR$/kotlin-spring-boot-actuator-autoconfigure" />
+            <option value="$PROJECT_DIR$/kotlin-spring-boot-autoconfigure" />
+            <option value="$PROJECT_DIR$/kotlin-spring-boot-devtools" />
+            <option value="$PROJECT_DIR$/kotlin-spring-boot-test" />
+            <option value="$PROJECT_DIR$/kotlin-spring-boot-tools" />
+            <option value="$PROJECT_DIR$/kotlin-spring-boot-tools/kotlin-spring-boot-gradle-plugin" />
+            <option value="$PROJECT_DIR$/kotlin-spring-boot-tools/kotlin-spring-boot-loader" />
+            <option value="$PROJECT_DIR$/kotlin-spring-boot-tools/kotlin-spring-boot-loader-tools" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
