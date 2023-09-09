@@ -33,9 +33,9 @@ open class TaskExecutorMetricsAutoConfiguration {
      *
      * @see ThreadPoolTaskExecutor
      */
-    @Autowired
-    open fun bindTaskExecutorsToRegistry(executors: Map<String, Executor>, registry: MeterRegistry) {
-        executors.forEach { (name, executor) ->
+    @Autowired(required = false)
+    open fun bindTaskExecutorsToRegistry(executors: Map<String, Executor>?, registry: MeterRegistry) {
+        executors?.forEach { (name, executor) ->
             if (executor is ThreadPoolTaskExecutor) {
                 monitor(registry, safeGetThreadPoolExecutor(executor), name)
             }

@@ -93,7 +93,7 @@ class BindConverter(conversionServices: List<ConversionService>) {
     fun canConvert(@Nullable source: Any?, targetType: ResolvableType): Boolean {
         source ?: return false
         delegates.forEach {
-            if (it.canConvert(TypeDescriptor.forObject(source), TypeDescriptor(targetType))) {
+            if (it.canConvert(TypeDescriptor.forObject(source), TypeDescriptor(targetType, null, emptyArray()))) {
                 return true
             }
         }
@@ -111,8 +111,8 @@ class BindConverter(conversionServices: List<ConversionService>) {
         return null
     }
 
-    private class ResolvableTypeDescriptor(type: ResolvableType, val annotations: Array<Annotation>) :
-        TypeDescriptor(type)
+    private class ResolvableTypeDescriptor(type: ResolvableType, annotations: Array<Annotation>) :
+        TypeDescriptor(type, null, annotations)
 
     /**
      * TypeConverter ConversionService
@@ -128,10 +128,6 @@ class BindConverter(conversionServices: List<ConversionService>) {
         override fun getConvertibleTypes(): Set<GenericConverter.ConvertiblePair> = setOf(
             GenericConverter.ConvertiblePair(String::class.java, Any::class.java)
         )
-
-        override fun <S : Any, T : Any> convert(source: Any?, sourceType: Class<S>, targetType: Class<T>): T? {
-            return source as T?
-        }
 
         override fun convert(source: Any?, sourceType: TypeDescriptor, targetType: TypeDescriptor): Any? {
             return source
