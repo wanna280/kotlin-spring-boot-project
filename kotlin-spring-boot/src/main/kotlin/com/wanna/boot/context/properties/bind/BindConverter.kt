@@ -102,7 +102,7 @@ class BindConverter(conversionServices: List<ConversionService>) {
 
     @Nullable
     @Suppress("UNCHECKED_CAST")
-    private fun <T : Any> convert(source: Any, sourceType: TypeDescriptor, targetType: TypeDescriptor): T? {
+    private fun <T : Any> convert(source: Any, sourceType: TypeDescriptor?, targetType: TypeDescriptor): T? {
         delegates.forEach {
             if (it.canConvert(sourceType, targetType)) {
                 return it.convert(source, targetType) as T?
