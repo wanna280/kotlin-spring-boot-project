@@ -17,6 +17,7 @@
             <option value="$PROJECT_DIR$/kotlin-spring-boot-devtools" />
             <option value="$PROJECT_DIR$/kotlin-spring-boot-test" />
             <option value="$PROJECT_DIR$/kotlin-spring-boot-tools" />
+            <option value="$PROJECT_DIR$/kotlin-spring-boot-tools/kotlin-spring-boot-autoconfigure-processor" />
             <option value="$PROJECT_DIR$/kotlin-spring-boot-tools/kotlin-spring-boot-gradle-plugin" />
             <option value="$PROJECT_DIR$/kotlin-spring-boot-tools/kotlin-spring-boot-loader" />
             <option value="$PROJECT_DIR$/kotlin-spring-boot-tools/kotlin-spring-boot-loader-tools" />
