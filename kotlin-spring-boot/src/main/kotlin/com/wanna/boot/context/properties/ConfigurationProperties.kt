@@ -1,5 +1,6 @@
 package com.wanna.boot.context.properties
 
+import com.wanna.framework.context.stereotype.Indexed
 import com.wanna.framework.core.annotation.AliasFor
 
 /**
@@ -17,6 +18,7 @@ import com.wanna.framework.core.annotation.AliasFor
  * @param prefix 要去进行绑定的属性前缀, 同value
  * @param value 要去进行绑定的属性前缀, 同prefix
  */
+@Indexed
 @Target(AnnotationTarget.CLASS, AnnotationTarget.FUNCTION)
 annotation class ConfigurationProperties(
     @get:AliasFor("prefix", annotation = ConfigurationProperties::class)
