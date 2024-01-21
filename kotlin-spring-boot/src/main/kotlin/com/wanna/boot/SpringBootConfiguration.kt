@@ -1,6 +1,7 @@
 package com.wanna.boot
 
 import com.wanna.framework.context.annotation.Configuration
+import com.wanna.framework.context.stereotype.Indexed
 import com.wanna.framework.core.annotation.AliasFor
 
 /**
@@ -8,6 +9,7 @@ import com.wanna.framework.core.annotation.AliasFor
  *
  * @param proxyBeanMethods 是否代理@Bean方法?
  */
+@Indexed
 @Target(AnnotationTarget.ANNOTATION_CLASS, AnnotationTarget.CLASS, AnnotationTarget.TYPE)
 @Configuration
 annotation class SpringBootConfiguration(
