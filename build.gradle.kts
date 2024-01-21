@@ -2,6 +2,7 @@ plugins {
     kotlin("jvm") version kotlinVersion
     java
     `maven-publish`
+    kotlin("kapt") version kotlinVersion
 }
 
 allprojects {
